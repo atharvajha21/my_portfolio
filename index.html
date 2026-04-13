@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Atharva Jha – B.Tech CSE (AI & ML) student at Newton School of Technology. Aspiring Software Developer passionate about DSA, AI, and building scalable web applications." />
+  <meta name="keywords" content="Atharva Jha, Portfolio, Software Developer, AI ML, DSA, LeetCode, React, Python" />
+  <meta property="og:title" content="Atharva Jha | Portfolio" />
+  <meta property="og:description" content="Aspiring Software Developer | AI & ML Enthusiast" />
+  <title>Atharva Jha | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- ======================== NAVBAR ======================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">&lt;AJ /&gt;</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#profiles" class="nav-link" data-section="profiles">Profiles</a></li>
+      <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="section hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-text" data-aos>
+        <div class="hero-greeting">
+          <span class="greeting-emoji">👋</span>
+          <span>Hello, World! I'm</span>
+        </div>
+        <h1 class="hero-name">Atharva Jha</h1>
+        <div class="hero-subtitle">
+          <span class="typing-prefix">I'm an </span>
+          <span class="typed-text" id="typed-text"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-intro">
+          I am a <strong>B.Tech CSE (AI &amp; ML)</strong> student at <strong>Newton School of Technology</strong>,
+          passionate about solving problems using <strong>Data Structures &amp; Algorithms</strong>
+          and building <strong>scalable web applications</strong>.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary" id="view-projects-btn">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline" id="contact-me-btn">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/atharvajha21" target="_blank" rel="noopener" class="social-icon" id="hero-github"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/atharvajha21/" target="_blank" rel="noopener" class="social-icon"
+            id="hero-linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://leetcode.com/u/atharvajha21/" target="_blank" rel="noopener" class="social-icon"
+            id="hero-leetcode" aria-label="LeetCode">
+            <i class="fas fa-code"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-avatar" data-aos>
+        <div class="avatar-ring">
+          <div class="avatar-glow"></div>
+          <img src="image.png" alt="Atharva Jha – Developer Avatar" class="avatar-img" id="hero-avatar" />
+          <div class="avatar-orbit" id="orbit-1">
+            <div class="orbit-dot"></div>
+          </div>
+          <div class="avatar-orbit" id="orbit-2">
+            <div class="orbit-dot"></div>
+          </div>
+        </div>
+        <div class="floating-badge badge-1"><i class="fab fa-python"></i> Python</div>
+        <div class="floating-badge badge-2"><i class="fab fa-react"></i> React</div>
+        <div class="floating-badge badge-3"><i class="fas fa-brain"></i> AI/ML</div>
+        <div class="floating-badge badge-4"><i class="fas fa-code-branch"></i> DSA</div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" id="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-arrow"></div>
+    </a>
+  </section>
+
+  <!-- ======================== ABOUT ======================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">// about_me</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Get to know me a little better</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass" data-aos>
+          <div class="about-icon-wrap">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3>Education</h3>
+          <p>Pursuing <strong>B.Tech in CSE (AI &amp; ML)</strong> at Newton School of Technology. Focused on building a
+            strong foundation in computer science fundamentals, machine learning, and modern software engineering
+            practices.</p>
+        </div>
+        <div class="about-card glass" data-aos>
+          <div class="about-icon-wrap">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <h3>DSA & Problem Solving</h3>
+          <p>Strong focus on <strong>Data Structures &amp; Algorithms</strong>. A regular problem solver on
+            <strong>LeetCode</strong> and <strong>Codeforces</strong>, consistently grinding through challenges to
+            sharpen logical thinking and algorithmic skills.
+          </p>
+        </div>
+        <div class="about-card glass" data-aos>
+          <div class="about-icon-wrap">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Engineering Passion</h3>
+          <p>Passionate about <strong>software engineering</strong> and building impactful systems. I love turning
+            complex ideas into elegant, scalable applications that solve real-world problems and make people's lives
+            better.</p>
+        </div>
+        <div class="about-card glass" data-aos>
+          <div class="about-icon-wrap">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>AI & Machine Learning</h3>
+          <p>Deeply interested in <strong>Artificial Intelligence &amp; Machine Learning</strong>. Exploring how AI can
+            be leveraged to build smarter applications that can automate, predict, and learn from data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SKILLS ======================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">// tech_stack</span>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Technologies &amp; tools I work with</p>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category glass" data-aos>
+          <div class="skill-category-header">
+            <i class="fas fa-terminal"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr: #3b8ee0"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-tag" style="--clr: #f7df1e"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass" data-aos>
+          <div class="skill-category-header">
+            <i class="fas fa-layer-group"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr: #61dafb"><i class="fab fa-react"></i> React</span>
+            <span class="skill-tag" style="--clr: #e34c26"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="skill-tag" style="--clr: #264de4"><i class="fab fa-css3-alt"></i> CSS3</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass" data-aos>
+          <div class="skill-category-header">
+            <i class="fas fa-sitemap"></i>
+            <h3>CS Concepts</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr: #a855f7"><i class="fas fa-project-diagram"></i> Data Structures</span>
+            <span class="skill-tag" style="--clr: #06b6d4"><i class="fas fa-cogs"></i> Algorithms</span>
+            <span class="skill-tag" style="--clr: #10b981"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass" data-aos>
+          <div class="skill-category-header">
+            <i class="fas fa-tools"></i>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr: #f05032"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-tag" style="--clr: #e5e7eb"><i class="fab fa-github"></i> GitHub</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Progress Bars Section -->
+      <div class="skill-bars" data-aos>
+        <h3 class="bars-heading">Proficiency Levels</h3>
+        <div class="bar-item">
+          <div class="bar-label"><span>Python</span><span>85%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="85" style="--clr:#3b8ee0"></div>
+          </div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>Data Structures &amp; Algorithms</span><span>80%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="80" style="--clr:#a855f7"></div>
+          </div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>JavaScript / React</span><span>75%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="75" style="--clr:#f7df1e"></div>
+          </div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>HTML &amp; CSS</span><span>88%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="88" style="--clr:#e34c26"></div>
+          </div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>Git &amp; Version Control</span><span>78%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="78" style="--clr:#f05032"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== PROJECTS ======================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">// my_work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Things I've built that I'm proud of</p>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card glass" data-aos id="project-smart-city">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-city"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/atharvajha21" target="_blank" rel="noopener" class="proj-link"
+                aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://animated-cajeta-202630.netlify.app/" target="_blank" rel="noopener" class="proj-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Smart City Dashboard</h3>
+            <p class="project-desc">A production-grade web dashboard for citizens to access real-time weather, currency
+              data, news, and an integrated AI chatbot. It was made as a project in class using Antigravity, built with a focus on clean UX, live APIs, and responsive
+              design.</p>
+            <div class="project-tags">
+              <span class="proj-tag">HTML</span>
+              <span class="proj-tag">CSS</span>
+              <span class="proj-tag">JavaScript</span>
+              <span class="proj-tag">REST APIs</span>
+              <span class="proj-tag">Netlify</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div class="project-status status-live"><span class="status-dot"></span> Live</div>
+          </div>
+        </article>
+
+        <article class="project-card glass" data-aos id="project-movie-explorer">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-film"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/atharvajha21" target="_blank" rel="noopener" class="proj-link"
+                aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://splendid-strudel-7112e5.netlify.app/" target="_blank" rel="noopener" class="proj-link"
+                aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Movie Explorer</h3>
+            <p class="project-desc">A responsive movie discovery app that lets users search and explore films using a
+              public movies API. Features real-time search, movie details, clean card-based UI, and smooth loading
+              states.</p>
+            <div class="project-tags">
+              <span class="proj-tag">HTML</span>
+              <span class="proj-tag">CSS</span>
+              <span class="proj-tag">JavaScript</span>
+              <span class="proj-tag">Movies API</span>
+              <span class="proj-tag">Netlify</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div class="project-status status-live"><span class="status-dot"></span> Live</div>
+          </div>
+        </article>
+
+        <article class="project-card glass" data-aos id="project-nova-chatbot">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-comment-dots"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/atharvajha21" target="_blank" rel="noopener" class="proj-link"
+                aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://cool-marigold-a49466.netlify.app/" target="_blank" rel="noopener" class="proj-link"
+                aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Nova AI Chatbot</h3>
+            <p class="project-desc">A full-featured AI chatbot built with vibe coding — supports dual modes: 💬 Chat
+              mode powered by OpenRouter API for intelligent conversations, and 🎨 Image mode using Hugging Face to
+              generate images from text prompts. Clean UI with seamless mode switching.</p>
+            <div class="project-tags">
+              <span class="proj-tag">HTML</span>
+              <span class="proj-tag">CSS</span>
+              <span class="proj-tag">JavaScript</span>
+              <span class="proj-tag">OpenRouter API</span>
+              <span class="proj-tag">Hugging Face</span>
+              <span class="proj-tag">Netlify</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div class="project-status status-live"><span class="status-dot"></span> Live</div>
+          </div>
+        </article>
+
+        <article class="project-card glass" data-aos id="project-api-playground">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="fas fa-plug"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/atharvajha21" target="_blank" rel="noopener" class="proj-link"
+                aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://silly-cat-4bef10.netlify.app/" target="_blank" rel="noopener" class="proj-link"
+                aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Public API Playground</h3>
+            <p class="project-desc">A responsive web app featuring four distinct API integrations: Dog Finder, Joke
+              Generator, Random User Profile, and Posts Viewer. Utilizes async/await with robust loading and error
+              states.</p>
+            <div class="project-tags">
+              <span class="proj-tag">HTML</span>
+              <span class="proj-tag">CSS</span>
+              <span class="proj-tag">JavaScript</span>
+              <span class="proj-tag">Public APIs</span>
+              <span class="proj-tag">Netlify</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div class="project-status status-live"><span class="status-dot"></span> Live</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CODING PROFILES ======================== -->
+  <section class="section" id="profiles">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">// coding_profiles</span>
+        <h2 class="section-title">Coding Profiles</h2>
+        <p class="section-subtitle">Where I solve problems and build my portfolio</p>
+      </div>
+      <div class="profiles-grid">
+
+        <a href="https://github.com/atharvajha21" target="_blank" rel="noopener" class="profile-card glass" data-aos
+          id="profile-github">
+          <div class="profile-icon github-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="profile-info">
+            <h3>GitHub</h3>
+            <p>@atharvajha21</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+          <div class="profile-bg-icon"><i class="fab fa-github"></i></div>
+        </a>
+
+        <a href="https://leetcode.com/u/atharvajha21/" target="_blank" rel="noopener" class="profile-card glass"
+          data-aos id="profile-leetcode">
+          <div class="profile-icon leetcode-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="profile-info">
+            <h3>LeetCode</h3>
+            <p>@atharvajha21</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+          <div class="profile-bg-icon"><i class="fas fa-code"></i></div>
+        </a>
+
+        <a href="https://codeforces.com/profile/atharvajha21" target="_blank" rel="noopener" class="profile-card glass"
+          data-aos id="profile-codeforces">
+          <div class="profile-icon cf-icon">
+            <i class="fas fa-fire"></i>
+          </div>
+          <div class="profile-info">
+            <h3>Codeforces</h3>
+            <p>@atharvajha21</p>
+            <span class="profile-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+          <div class="profile-bg-icon"><i class="fas fa-fire"></i></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ACHIEVEMENTS ======================== -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">// milestones</span>
+        <h2 class="section-title">Achievements</h2>
+        <p class="section-subtitle">Progress and milestones along the journey</p>
+      </div>
+      <div class="achievements-grid">
+
+        <div class="achievement-card glass" data-aos id="ach-dsa">
+          <div class="ach-icon" style="--clr:#a855f7"><i class="fas fa-code"></i></div>
+          <div class="ach-count counter" data-target="200">0</div>
+          <div class="ach-label">DSA Problems Solved</div>
+          <p class="ach-desc">Consistently solving algorithmic challenges across LeetCode and Codeforces, covering
+            arrays, trees, graphs, DP, and more.</p>
+        </div>
+
+        <div class="achievement-card glass" data-aos id="ach-contests">
+          <div class="ach-icon" style="--clr:#f59e0b"><i class="fas fa-trophy"></i></div>
+          <div class="ach-count counter" data-target="15">0</div>
+          <div class="ach-label">Contests Participated</div>
+          <p class="ach-desc">Actively participated in competitive programming contests on Newton
+            of Technology,
+            sharpening speed and accuracy.</p>
+        </div>
+
+        <div class="achievement-card glass" data-aos id="ach-projects">
+          <div class="ach-icon" style="--clr:#10b981"><i class="fas fa-folder-open"></i></div>
+          <div class="ach-count counter" data-target="10">0</div>
+          <div class="ach-label">Projects Built</div>
+          <p class="ach-desc">Developed multiple real-world projects integrating APIs, AI models, and modern web
+            frameworks from scratch.</p>
+        </div>
+
+        <div class="achievement-card glass" data-aos id="ach-streak">
+          <div class="ach-icon" style="--clr:#ef4444"><i class="fas fa-fire-alt"></i></div>
+          <div class="ach-count counter" data-target="30">0</div>
+          <div class="ach-label">Day Coding Streak</div>
+          <p class="ach-desc">Maintained a consistent daily coding habit, solving problems and building projects every
+            single day.</p>
+        </div>
+
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline" data-aos>
+        <h3 class="timeline-heading">Journey So Far</h3>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2025</span>
+              <h4>Started B.Tech CSE (AI & ML)</h4>
+              <p>Enrolled at Newton School of Technology, began learning programming fundamentals and data structures.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2025–26</span>
+              <h4>Deep Dive into DSA</h4>
+              <p>Started competitive programming on LeetCode and Codeforces. Solved 150+ problems across various
+                categories.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2026</span>
+              <h4>Web Development & AI Projects</h4>
+              <p>Built multiple projects including AI chatbot, text-to-image generator, and Smart City Dashboard using
+                modern tools.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot active"></div>
+            <div class="timeline-content glass">
+              <span class="timeline-date">2026 →</span>
+              <h4>Targeting Top Tech Companies</h4>
+              <p>Preparing for SDE roles with a focus on system design, advanced DSA, and full-stack development skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">// get_in_touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Have an opportunity or want to collaborate? Let's talk!</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info" data-aos>
+          <div class="contact-card glass" id="contact-email">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-details">
+              <span class="contact-label">Email</span>
+              <a href="mailto:jha.atharva2006@gmail.com" class="contact-value">jha.atharva2006@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card glass" id="contact-linkedin">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div class="contact-details">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/atharvajha21/" target="_blank" rel="noopener"
+                class="contact-value">linkedin.com/in/atharvajha21</a>
+            </div>
+          </div>
+          <div class="contact-card glass" id="contact-github">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-details">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/atharvajha21" target="_blank" rel="noopener"
+                class="contact-value">github.com/atharvajha21</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass" id="contact-form" data-aos>
+          <h3 class="form-heading">Send a Message</h3>
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email-field">Email</label>
+            <input type="email" id="contact-email-field" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder="Your message..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full" id="send-message-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-note" id="form-success" style="display:none;">✅ Message sent! I'll get back to you soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">&lt;AJ /&gt;</div>
+      <p class="footer-tagline">Crafted with <span class="heart">❤️</span> by <strong>Atharva Jha</strong></p>
+      <p class="footer-tagline" style="font-size: 0.85em; margin-top: 8px; opacity: 0.8;">Made using <strong>Antigravity</strong> &amp; <strong>Vibe Coding</strong> ✨</p>
+      <div class="footer-socials">
+        <a href="https://github.com/atharvajha21" target="_blank" rel="noopener" aria-label="GitHub"
+          id="footer-github"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/atharvajha21/" target="_blank" rel="noopener" aria-label="LinkedIn"
+          id="footer-linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://leetcode.com/u/atharvajha21/" target="_blank" rel="noopener" aria-label="LeetCode"
+          id="footer-leetcode"><i class="fas fa-code"></i></a>
+        <a href="https://codeforces.com/profile/atharvajha21" target="_blank" rel="noopener" aria-label="Codeforces"
+          id="footer-codeforces"><i class="fas fa-fire"></i></a>
+        <a href="mailto:jha.atharva2006@gmail.com" aria-label="Email" id="footer-email"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Atharva Jha. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
